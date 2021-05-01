@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        3
+Release:        4
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -41,6 +41,9 @@ systemctl enable get-bing-potd.timer
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sat May 01 2021 Enrique Gil <mahoul@gmail.com> - 0.1-4
+- Increased release
+
 * Sat May 01 2021 Enrique Gil <mahoul@gmail.com> - 0.1-3
 - Increased released
 
