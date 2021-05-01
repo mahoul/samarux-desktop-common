@@ -1,0 +1,10 @@
+[Unit]
+Description = Get Bing Picture Of The Day
+Requires = get-bing-potd.service
+
+[Timer]
+Unit = get-bing-potd.service
+OnCalendar=*-*-* *:30:00
+
+[Install]
+WantedBy = timers.target
