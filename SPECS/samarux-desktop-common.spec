@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        5
+Release:        6
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -31,6 +31,7 @@ Includes service for gettting BING POTD and firstboot script.
 %post
 systemctl enable get-bing-potd.timer
 systemctl enable samarux-first-boot
+dconf update
 
 %clean
 
@@ -46,6 +47,9 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-6
+- Added dconf update on post
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-5
 - Added default theming for GNOME and terminal
 
