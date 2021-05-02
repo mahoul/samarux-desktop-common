@@ -79,6 +79,9 @@ BING_IMG_TODAY="$BING_IMG_DIR/today.png"
 DEFAULT_WALLPAPER="/usr/share/backgrounds/default.png"
 DEFAULT_WALLPAPER_BLURRED="/usr/share/backgrounds/default_blurred.png"
 EMBED_IMG_INFO=0
+F_RELEASE=$(awk '{print $3}' /etc/fedora-release)
+F_DEF_BACKGROUND="/usr/share/backgrounds/f${F_RELEASE}/default/f${F_RELEASE}.png"
+
 
 # If -e is passed as arg, embed description on the lower left corner.
 #
@@ -118,8 +121,10 @@ fi
 # Symlink the POTD as today.png.
 #
 if [ -s $BING_IMG ]; then
-       ln -sf $BING_IMG $BING_IMG_TODAY
-       ln -sf $BING_IMG $DEFAULT_WALLPAPER
+	ln -sf $BING_IMG $BING_IMG_TODAY
+	ln -sf $BING_IMG $DEFAULT_WALLPAPER
+else
+	ln -sf $F_DEF_BACKGROUND $DEFAULT_WALLPAPER
 fi
 
 # Create a blurred version of default.png
