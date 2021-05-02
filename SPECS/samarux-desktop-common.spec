@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        16
+Release:        17
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -32,10 +32,10 @@ Includes service for gettting BING POTD and firstboot script.
 %{__install} -D -m644 etc/skel/.vimrc 					%{buildroot}/etc/skel/.vimrc
 
 mkdir -p %{buildroot}/etc/skel/.config/powerline
-rsync -avr --progress --delete etc/skel/.config/powerline	%{buildroot}/etc/skel/.config/powerline
+rsync -avr --progress --delete etc/skel/.config/powerline/	%{buildroot}/etc/skel/.config/powerline/
 
 mkdir -p %{buildroot}/etc/skel/.vim
-rsync -avr --progress --delete etc/skel/.vim			%{buildroot}/etc/skel/.vim
+rsync -avr --progress --delete etc/skel/.vim/			%{buildroot}/etc/skel/.vim/
 
 %post
 systemctl enable get-bing-potd.timer
@@ -60,6 +60,9 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-17
+- Fix vim and powerline dir rsync
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-16
 - Fixed install section for tmux and powerline dirs
 
