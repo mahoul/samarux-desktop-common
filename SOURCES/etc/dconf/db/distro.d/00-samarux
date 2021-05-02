@@ -1,0 +1,18 @@
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/default.png'
+
+gsettings set org.gnome.desktop.screensaver picture-uri "file://$WALLPAPER_BLURRED"
+
+[org/gnome/desktop/interface]
+document-font-name='Fira Sans Medium 11'
+font-name='Fira Sans Medium 11'
+monospace-font-name='Fira Code Medium 10'
+
+[org/gnome/desktop/wm/preferences]
+titlebar-font='Fira Sans Bold 11'
+resize-with-right-button=true
+
+[org/gnome/shell]
+enabled-extensions=['']
+favorite-apps=['org.gnome.Terminal.desktop', 'firefox.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'anaconda.desktop']
+

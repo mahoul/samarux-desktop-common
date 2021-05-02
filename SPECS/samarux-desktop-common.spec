@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        4
+Release:        5
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -25,9 +25,12 @@ Includes service for gettting BING POTD and firstboot script.
 %{__install} -D -m644 etc/systemd/system/samarux-first-boot.service 	%{buildroot}/etc/systemd/system/samarux-first-boot.service
 %{__install} -D -m755 usr/bin/get-bing-potd.sh	 	 %{buildroot}/usr/bin/get-bing-potd.sh
 %{__install} -D -m755 usr/bin/samarux-first-boot.sh	 	 %{buildroot}/usr/bin/samarux-first-boot.sh
+%{__install} -D -m644 etc/dconf/db/distro.d/00-samarux-terminal %{buildroot}/etc/dconf/db/distro.d/00-samarux-terminal
+%{__install} -D -m644 etc/dconf/db/distro.d/00-samarux %{buildroot}/etc/dconf/db/distro.d/00-samarux
 
 %post
 systemctl enable get-bing-potd.timer
+systemctl enable samarux-first-boot
 
 %clean
 
@@ -37,10 +40,15 @@ systemctl enable get-bing-potd.timer
 /etc/systemd/system/get-bing-potd.service
 /etc/systemd/system/get-bing-potd.timer  
 /etc/systemd/system/samarux-first-boot.service
+/etc/dconf/db/distro.d/00-samarux-terminal
+/etc/dconf/db/distro.d/00-samarux
 /usr/bin/get-bing-potd.sh
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-5
+- Added default theming for GNOME and terminal
+
 * Sat May 01 2021 Enrique Gil <mahoul@gmail.com> - 0.1-4
 - Increased release
 

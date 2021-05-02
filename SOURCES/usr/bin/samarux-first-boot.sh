@@ -1,5 +1,10 @@
 #!/bin/bash
 
+die(){
+	logger $1
+	exit $2
+}
+
 get_root_sub_id(){
 	btrfs sub show / | awk '/Subvolume ID/ {print $NF}'
 }
@@ -58,7 +63,15 @@ rootfs_on_btrfs(){
 	fi
 }
 
+running_on_live(){
+	grep -q "rd.live.image" /proc/cmdline
+}
+
 SM_FLAG_FILE=/root/.samarux_first_boot
+
+if running_on_live; then
+	die "Running on live media system. Quitting." 0
+fi
 
 if [ ! -f $SM_FLAG_FILE ]; then
 	export LC_ALL=C

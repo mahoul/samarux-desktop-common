@@ -1,0 +1,76 @@
+[org/gnome/terminal/legacy]
+default-show-menubar=false
+headerbar=@mb false
+menu-accelerator-enabled=false
+
+[org/gnome/terminal/legacy/profiles:]
+default='008afca2-76ee-40ff-a9b7-60d6192900ae'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '9b6866dd-0dc7-4719-afa9-a741df5e78a5', '008afca2-76ee-40ff-a9b7-60d6192900ae', '105c3114-3c2e-4961-a374-ba4e2c848fed', '095745d1-2889-425a-bdbe-63715481466a' ]
+
+[org/gnome/terminal/legacy/profiles:/:008afca2-76ee-40ff-a9b7-60d6192900ae]
+allow-bold=true
+background-color='#282828282828'
+bold-color='#ebebdbdbb2b2'
+bold-color-same-as-fg=true
+cursor-background-color='#ebebdbdbb2b2'
+cursor-colors-set=true
+cursor-foreground-color='#282828282828'
+foreground-color='#ebebdbdbb2b2'
+palette=['#282828282828', '#cccc24241d1d', '#989897971a1a', '#d7d799992121', '#454585858888', '#b1b162628686', '#68689d9d6a6a', '#a8a899998484', '#929283837474', '#fbfb49493434', '#b8b8bbbb2626', '#fafabdbd2f2f', '#8383a5a59898', '#d3d386869b9b', '#8e8ec0c07c7c', '#ebebdbdbb2b2']
+scrollbar-policy='never'
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Gruvbox Dark'
+
+[org/gnome/terminal/legacy/profiles:/:095745d1-2889-425a-bdbe-63715481466a]
+allow-bold=true
+background-color='#ebebeaeaf2f2'
+bold-color='#00004f4f7c7c'
+bold-color-same-as-fg=true
+cursor-background-color='#43439E9ECFCF'
+cursor-colors-set=true
+cursor-foreground-color='#ebebeaeaf2f2'
+foreground-color='#00004f4f7c7c'
+palette=['#353535353535', '#E6E645456969', '#8989D2D28787', '#DADAB7B75252', '#43439E9ECFCF', '#D9D96161DCDC', '#6464AAAAAFAF', '#B3B3B3B3B3B3', '#535353535353', '#E4E485859A9A', '#A2A2CCCCA1A1', '#E1E1E3E38787', '#6F6FBBBBE2E2', '#E5E58686E7E7', '#9696DCDCDADA', '#DEDEDEDEDEDE']
+scrollbar-policy='never'
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Nord Light'
+
+[org/gnome/terminal/legacy/profiles:/:105c3114-3c2e-4961-a374-ba4e2c848fed]
+allow-bold=true
+background-color='#2E2E34344040'
+bold-color='#D8D8DEDEE9E9'
+bold-color-same-as-fg=true
+cursor-background-color='#D8D8DEDEE9E9'
+cursor-colors-set=true
+cursor-foreground-color='#2E2E34344040'
+foreground-color='#D8D8DEDEE9E9'
+palette=['#3B3B42425252', '#BFBF61616A6A', '#A3A3BEBE8C8C', '#EBEBCBCB8B8B', '#8181A1A1C1C1', '#B4B48E8EADAD', '#8888C0C0D0D0', '#E5E5E9E9F0F0', '#4C4C56566A6A', '#BFBF61616A6A', '#A3A3BEBE8C8C', '#EBEBCBCB8B8B', '#8181A1A1C1C1', '#B4B48E8EADAD', '#8F8FBCBCBBBB', '#ECECEFEFF4F4']
+scrollbar-policy='never'
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Nord'
+
+[org/gnome/terminal/legacy/profiles:/:9b6866dd-0dc7-4719-afa9-a741df5e78a5]
+allow-bold=true
+background-color='#fbfbf1f1c7c7'
+bold-color='#3c3c38383636'
+bold-color-same-as-fg=true
+cursor-background-color='#3c3c38383636'
+cursor-colors-set=true
+cursor-foreground-color='#fbfbf1f1c7c7'
+foreground-color='#3c3c38383636'
+palette=['#fbfbf1f1c7c7', '#cccc24241d1d', '#989897971a1a', '#d7d799992121', '#454585858888', '#b1b162628686', '#68689d9d6a6a', '#7c7c6f6f6464', '#929283837474', '#9d9d00000606', '#797974740e0e', '#b5b576761414', '#070766667878', '#8f8f3f3f7171', '#42427b7b5858', '#3c3c38383636']
+scrollbar-policy='never'
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Gruvbox'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+visible-name='Default'
+

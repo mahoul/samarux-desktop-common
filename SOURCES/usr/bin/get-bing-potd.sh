@@ -73,10 +73,11 @@ fi
 BING_XML=$(mktemp)
 
 BING_URL='http://www.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=en-US'
-BING_IMG_DIR="/usr/share/wallpapers/bing"
+BING_IMG_DIR="/usr/share/backgrounds/bing"
 BING_IMG=$(get_bing_img_filename)
 BING_IMG_TODAY="$BING_IMG_DIR/today.png"
 DEFAULT_WALLPAPER="/usr/share/backgrounds/default.png"
+DEFAULT_WALLPAPER_BLURRED="/usr/share/backgrounds/default_blurred.png"
 EMBED_IMG_INFO=0
 
 # If -e is passed as arg, embed description on the lower left corner.
@@ -119,6 +120,12 @@ fi
 if [ -s $BING_IMG ]; then
        ln -sf $BING_IMG $BING_IMG_TODAY
        ln -sf $BING_IMG $DEFAULT_WALLPAPER
+fi
+
+# Create a blurred version of default.png
+#
+if [ -s $DEFAULT_WALLPAPER ]; then
+	convert $DEFAULT_WALLPAPER -blur 10x10 $DEFAULT_WALLPAPER_BLURRED
 fi
 
 die "" 0
