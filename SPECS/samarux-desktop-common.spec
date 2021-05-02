@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        12
+Release:        13
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -48,6 +48,9 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-13
+- Added additional repo configuration on post
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-12
 - Added fallback for get-bing-potd.sh
 

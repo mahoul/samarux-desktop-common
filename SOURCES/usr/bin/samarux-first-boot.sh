@@ -67,6 +67,26 @@ running_on_live(){
 	grep -q "rd.live.image" /proc/cmdline
 }
 
+get_copr_repos(){
+        dnf copr list
+}
+
+copr_repo_enabled(){
+        local repo=$1
+        get_copr_repos | grep -q $repo
+}
+
+enable_copr_repo(){
+        local repo=$1
+        dnf copr enable -y $repo
+}
+
+enable_flathub(){
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+}
+
+COPR_REPOS="mahoul/samarux-desktop sbakker/perl"
+
 SM_FLAG_FILE=/root/.samarux_first_boot
 
 if running_on_live; then
@@ -108,6 +128,15 @@ if [ ! -f $SM_FLAG_FILE ]; then
 	if wayland_is_enabled; then
 		disable_wayland
 	fi
+
+	# Enable additional repos
+	#
+	for repo in $COPR_REPOS; do
+		if ! copr_repo_enabled $repo; then
+			enable_copr_repo $repo
+		fi
+	done
+	enable_flathub
 
 	touch $SM_FLAG_FILE
 	sync
