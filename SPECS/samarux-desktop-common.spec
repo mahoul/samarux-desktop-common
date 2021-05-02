@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        6
+Release:        7
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -8,6 +8,7 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 Packager: 	Enrique Gil (mahoul@gmail.com)
 BuildArch:	noarch
 BuildRequires:	rsync
+Requires:	dconf-editor, fira-code-fonts, guake, gnome-tweaks, google-chrome-stable, gvfs-nfs, gvfs-smb, htop, ImageMagick, mozilla-fira-sans-fonts, nemo, openssl, pavucontrol, python3-dnf-plugin-snapper, snapper, vim, vlc, @admin-tools
 
 %description
 Common Samarux scripts and fixes.
@@ -47,6 +48,9 @@ dconf update
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com>
+- Added required packages
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-6
 - Added dconf update on post
 
