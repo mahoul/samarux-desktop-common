@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        10
+Release:        11
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -32,7 +32,7 @@ Includes service for gettting BING POTD and firstboot script.
 %post
 systemctl enable get-bing-potd.timer
 systemctl enable samarux-first-boot
-dconf update
+[ -s /etc/dconf/db/distro ] && dconf update
 
 %clean
 
@@ -48,6 +48,9 @@ dconf update
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-11
+- Run only dconf update if distro DB exists
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-10
 - Fixed 00-samarux dconf file
 
