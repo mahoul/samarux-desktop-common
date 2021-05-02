@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        14
+Release:        15
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -30,8 +30,8 @@ Includes service for gettting BING POTD and firstboot script.
 %{__install} -D -m644 etc/dconf/db/distro.d/00-samarux 			%{buildroot}/etc/dconf/db/distro.d/00-samarux
 %{__install} -Dd -m755 etc/skel/.config/powerline			%{buildroot}/etc/skel/.config/powerline
 %{__install} -Dd -m755 etc/skel/.vim					%{buildroot}/etc/skel/.vim
-%{__install} -Dd -m644 etc/skel/.tmux.conf 				%{buildroot}/etc/skel/.tmux.conf
-%{__install} -Dd -m644 etc/skel/.vimrc 					%{buildroot}/etc/skel/.vimrc
+%{__install} -D -m644 etc/skel/.tmux.conf 				%{buildroot}/etc/skel/.tmux.conf
+%{__install} -D -m644 etc/skel/.vimrc 					%{buildroot}/etc/skel/.vimrc
 
 
 %post
@@ -57,6 +57,9 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-15
+- Fixed install section
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-14
 - Added powerline dependencies and default user config
 
