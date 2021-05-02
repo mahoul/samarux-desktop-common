@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        9
+Release:        10
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -48,6 +48,9 @@ dconf update
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-10
+- Fixed 00-samarux dconf file
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-9
 - Added exa as a pkg requirement
 

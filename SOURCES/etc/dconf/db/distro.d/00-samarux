@@ -1,8 +1,6 @@
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/default.png'
 
-gsettings set org.gnome.desktop.screensaver picture-uri "file://$WALLPAPER_BLURRED"
-
 [org/gnome/desktop/interface]
 document-font-name='Fira Sans Medium 11'
 font-name='Fira Sans Medium 11'
