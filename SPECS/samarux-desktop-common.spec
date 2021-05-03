@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        17
+Release:        19
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -40,7 +40,7 @@ rsync -avr --progress --delete etc/skel/.vim/			%{buildroot}/etc/skel/.vim/
 %post
 systemctl enable get-bing-potd.timer
 systemctl enable samarux-first-boot
-[ -s /etc/dconf/db/distro ] && dconf update
+#[ -s /etc/dconf/db/distro ] && dconf update
 
 %clean
 
@@ -60,6 +60,12 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Mon May 03 2021 Enrique Gil <mahoul@gmail.com> - 0.1-19
+- Removed dconf-update in post
+
+* Mon May 03 2021 Enrique Gil - 0.1-18
+- Removed dconf-update in post
+
 * Sun May 02 2021 Enrique Gil <mahoul@gmail.com> - 0.1-17
 - Fix vim and powerline dir rsync
 
