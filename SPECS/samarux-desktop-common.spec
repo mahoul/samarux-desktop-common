@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        19
+Release:        20
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -8,7 +8,7 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}-root
 Packager: 	Enrique Gil (mahoul@gmail.com)
 BuildArch:	noarch
 BuildRequires:	rsync
-Requires:	dconf-editor, exa, fira-code-fonts, guake, gnome-tweaks, google-chrome-stable, gvfs-nfs, gvfs-smb, htop, ImageMagick, mozilla-fira-sans-fonts, nemo, openssl, pavucontrol, python3-dnf-plugin-snapper, snapper, tmux, tmux-powerline, vim, vim-powerline, vim, vlc
+Requires:	dconf-editor, exa, fira-code-fonts, guake, gnome-tweaks, gvfs-nfs, gvfs-smb, htop, ImageMagick, mozilla-fira-sans-fonts, nemo, openssl, pavucontrol, python3-dnf-plugin-snapper, snapper, tmux, tmux-powerline, vim, vim-powerline, vim
 
 %description
 Common Samarux scripts and fixes.
@@ -60,6 +60,10 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sat May 08 2021 Enrique Gil <mahoul@gmail.com> - 0.1-20
+- Removed copr package enable on firstboot and moved non fedora pkg requires to
+  kickstart
+
 * Mon May 03 2021 Enrique Gil <mahoul@gmail.com> - 0.1-19
 - Removed dconf-update in post
 

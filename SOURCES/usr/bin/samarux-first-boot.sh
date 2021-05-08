@@ -129,13 +129,8 @@ if [ ! -f $SM_FLAG_FILE ]; then
 		disable_wayland
 	fi
 
-	# Enable additional repos
+	# Enable Flathub flatpak repository
 	#
-	for repo in $COPR_REPOS; do
-		if ! copr_repo_enabled $repo; then
-			enable_copr_repo $repo
-		fi
-	done
 	enable_flathub
 
 	touch $SM_FLAG_FILE
