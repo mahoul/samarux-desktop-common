@@ -129,9 +129,13 @@ if [ ! -f $SM_FLAG_FILE ]; then
 		disable_wayland
 	fi
 
-	# Enable Flathub flatpak repository
+	# Enable Flathub flatpak repository and addtional copr repositories
 	#
 	enable_flathub
+
+	for repo in $COPR_REPOS; do
+		enable_copr_repo $repo
+	done
 
 	touch $SM_FLAG_FILE
 	sync

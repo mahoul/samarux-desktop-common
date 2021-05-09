@@ -1,6 +1,6 @@
 Name:           samarux-desktop-common
 Version:        0.1
-Release:        20
+Release:        21
 Summary:        Common Samarux scripts and fixes
 License:        GPL
 Source: 	%{name}-%{version}.tar.gz
@@ -60,6 +60,9 @@ systemctl enable samarux-first-boot
 /usr/bin/samarux-first-boot.sh
 
 %changelog
+* Sun May 09 2021 Enrique Gil <mahoul@gmail.com> - 0.1-21
+- Reenabled COPR repos on first reboot
+
 * Sat May 08 2021 Enrique Gil <mahoul@gmail.com> - 0.1-20
 - Removed copr package enable on firstboot and moved non fedora pkg requires to
   kickstart
